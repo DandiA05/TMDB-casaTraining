@@ -13,6 +13,27 @@ const MENU_HEADER = [
     submenu: [],
   },
   {
+    id: 'nowPlaying-01',
+    name: 'Now Playing',
+    href: '/now_playing',
+    icon: 'IconChart',
+    submenu: [],
+  },
+  {
+    id: 'popular-01',
+    name: 'Popluar',
+    href: '/popular',
+    icon: 'IconChart',
+    submenu: [],
+  },
+  {
+    id: 'upcoming-01',
+    name: 'UP Coming',
+    href: '/upcoming',
+    icon: 'IconChart',
+    submenu: [],
+  },
+  {
     id: 'WatchList-02',
     name: 'WatchList',
     href: '/watch-list',

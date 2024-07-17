@@ -2,10 +2,10 @@
 
 import satellite from '@services/satellite'
 
-export const getNowPlaying = async (params?: any) => {
+export const getMovie = async (params?: any, type?: any) => {
   let response = {}
   await satellite
-    .get(`/now_playing`, {
+    .get(`/${type}`, {
       params: params,
     })
     .then(res => {

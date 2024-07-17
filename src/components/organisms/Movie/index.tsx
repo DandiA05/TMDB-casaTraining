@@ -1,18 +1,16 @@
 'use client'
-
 import Movie from '@components/molecules/Movie'
 import { getMovie } from '@services/api/TMDB'
-import { useGetMovie } from '@services/api/NowPlaying/query'
 import React, { useEffect, useState } from 'react'
 
-function Home() {
+const MoviePage = ({ type }: any) => {
   const [movies, setMovies] = useState<any[]>([])
 
   const getData = () => {
     const params = {
       page: '1',
     }
-    getMovie(params, 'top_rated').then((res: any) => {
+    getMovie(params, type).then((res: any) => {
       if (res.status === 'success') {
         setMovies(res.data.results)
       } else {
@@ -36,4 +34,4 @@ function Home() {
   )
 }
 
-export default Home
+export default MoviePage
