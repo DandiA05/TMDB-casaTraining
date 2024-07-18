@@ -28,4 +28,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/TMDB-casaTraining:main
+          tags: ${{ secrets.DOCKER_USERNAME }}/tmdb-casa-training:main
