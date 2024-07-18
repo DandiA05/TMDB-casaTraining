@@ -1,8 +1,7 @@
-import { keepPreviousData, useQuery } from '@tanstack/react-query'
+import { useQuery } from '@tanstack/react-query'
 import { getNowPlaying } from './api'
 
-export function useGetMovie(params: any, enabled?: boolean) {
-  console.log(params)
+export function useGetMovie(params: any) {
   return useQuery({
     queryKey: ['get-movie'],
     queryFn: () => getNowPlaying(params).then(resp => resp.data),

@@ -26,7 +26,7 @@ const MoviePage = ({ type }: any) => {
   return (
     <div className="px-4 flex flex-col h-screen overflow-scroll bg-black relative">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mb-36">
-        {movies?.map((item, idx) => (
+        {movies?.map(item => (
           <Movie key={item.id} item={item} />
         ))}
       </div>
