@@ -2,9 +2,13 @@ FROM node:lts-alpine as build
 
 WORKDIR /app
 
-COPY package*.json .env.local ./
+COPY package*.json ./
 
 RUN npm install
+
+ARG NEXT_PUBLIC_API_KEY
+
+ENV NEXT_PUBLIC_API_KEY=$NEXT_PUBLIC_API_KEY
 
 COPY . .
 
