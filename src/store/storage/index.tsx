@@ -3,6 +3,7 @@ import rootReducer from '@store/reducers'
 import { FLUSH, PAUSE, PERSIST, PURGE, REGISTER, REHYDRATE, persistReducer, persistStore } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 
+// add local storage
 export const persistedReducer = persistReducer(
   {
     key: 'root',
